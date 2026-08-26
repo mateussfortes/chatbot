@@ -1,0 +1,10 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: production
+      CHOKIDAR_USEPOLLING: ""
+    volumes: !reset []
+    command: !reset null
