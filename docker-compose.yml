@@ -36,6 +36,8 @@ services:
       DATABASE_PASSWORD: chatbot
       DATABASE_NAME: chatbot
       DATABASE_URL: postgresql://chatbot:chatbot@postgres:5432/chatbot
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4.1-mini}
     volumes:
       - ./src:/app/src
       - ./prisma:/app/prisma
